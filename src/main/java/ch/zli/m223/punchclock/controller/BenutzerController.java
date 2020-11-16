@@ -1,5 +1,7 @@
 package ch.zli.m223.punchclock.controller;
 
+import ch.zli.m223.punchclock.security.ApplicationSecurityConfig;
+import ch.zli.m223.punchclock.service.EntryService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
