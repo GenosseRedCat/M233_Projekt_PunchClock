@@ -1,5 +1,6 @@
 package ch.zli.m223.punchclock.controller;
 
+
 /***
  * This class was created by Jason Banyer
  * Date: 05.11.2020
@@ -9,6 +10,7 @@ package ch.zli.m223.punchclock.controller;
  *
  */
 public class AdminController extends BenutzerController {
+
 
 
 }
