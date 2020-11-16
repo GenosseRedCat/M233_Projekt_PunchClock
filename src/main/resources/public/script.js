@@ -26,6 +26,123 @@ const createEntry = (e) => {
     });
 };
 
+
+const modifyEntry = (ME) => {
+    ME.preventDefault();
+    const formData = new FormData(ME.target);
+    const entry = {};
+    entry['IdToModifyEntry'] = id;
+
+    modifyEntry(`${URL}/entries`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(id)
+    }).then((result) => {
+        result.json().then((id) => {
+            entries.push(id);
+            renderEntries();
+        });
+    });
+};
+
+const deleteEntry = (DE) => {
+    DE.preventDefault();
+    const formData = new FormData(DE.target);
+    const entry = {};
+    entry['IdToDeleteEntry'] = id;
+
+    deleteEntry(`${URL}/entries`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(id)
+    }).then((result) => {
+        result.json().then((id) => {
+            entries.push(id);
+            renderEntries();
+        });
+    });
+};
+
+
+const createUser = (CU) => {
+    CU.preventDefault();
+    const formData = new FormData(CU.target);
+    const user = {};
+    user['username'] = username;
+    user['password'] = password;
+    user['role'] = role;
+    createUser(`${URL}/users`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(username)
+        body: JSON.stringify(password)
+        body: JSON.stringify(role)
+    }).then((result) => {
+        result.json().then((username).then((password)).then((role)) => {
+            user.push(username);
+            user.push(password);
+            user.push(role);
+            renderUsers();
+        });
+    });
+};
+
+const modifyUser = (MU) => {
+    MU.preventDefault();
+    const formData = new FormData(MU.target);
+    const user = {};
+    user['username'] = username;
+    user['password'] = password;
+    user['role'] = role;
+    modifyUser(`${URL}/users`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(username)
+        body: JSON.stringify(password)
+        body: JSON.stringify(role)
+    }).then((result) => {
+        result.json().then((username).then((password)).then((role)) => {
+            user.push(username);
+            user.push(password);
+            user.push(role);
+            renderUsers();
+        });
+    });
+};
+
+const deleteUser = (DU) => {
+    DU.preventDefault();
+    const formData = new FormData(DU.target);
+    const user = {};
+    user['username'] = username;
+    user['password'] = password;
+    user['role'] = role;
+    deleteUser(`${URL}/users`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(username)
+        body: JSON.stringify(password)
+        body: JSON.stringify(role)
+    }).then((result) => {
+        result.json().then((username).then((password)).then((role)) => {
+            user.push(username);
+            user.push(password);
+            user.push(role);
+            renderUsers();
+        });
+    });
+};
+
 const indexEntries = () => {
     fetch(`${URL}/entries`, {
         method: 'GET'
