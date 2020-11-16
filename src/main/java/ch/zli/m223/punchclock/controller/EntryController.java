@@ -8,6 +8,16 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+/***
+ * This class was not created, but modified by Jason Banyer
+ * Date: 10.11.2020
+ *
+ * Description of this class:
+ * This class declares what exactly happens, when /entries is met with an access.
+ * Once one of these Mapping-Methods are called, the entryService is used to modify the list of PunchClock entries.
+ *
+ */
+
 @RestController
 @RequestMapping("/entries")
 public class EntryController {
@@ -17,50 +27,33 @@ public class EntryController {
         this.entryService = entryService;
     }
 
-    @GetMapping //Holt Eintrag
+    @GetMapping //Gets Entries
     @ResponseStatus(HttpStatus.OK)
     public List<Entry> getAllEntries() {
         return entryService.findAll();
     }
 
-    //erstellt neuen Eintrag
-    @PostMapping //Postet neuen Eintrag
+    //Creates new Entry
+    @PostMapping //Posts new Entry
     @ResponseStatus(HttpStatus.CREATED)
     public Entry createEntry(@Valid @RequestBody Entry entry) {
         return entryService.createEntry(entry);
     }
 
-
-
-
-
-
-
-
-
-
-
-    //löscht vorhandenen Eintrag via ID
+    //Deletes Pre-Existing entries via ID.
     //@RequestMapping(method = RequestMethod.DELETE, value="/entries/{id}")
-
-    @DeleteMapping("/entries/{id}")
+    @DeleteMapping("/entries/delete/{id}")
     @ResponseBody
     public void deleteEntry(@PathVariable Long id) {
         entryService.deleteEntry(id);
     }
-/*
-    @DeleteMapping("/entries/{id}")
+
+
+    @PutMapping("/entries/update/{id}")
     @ResponseBody
-    public void updateEntry(@PathVariable Long id) {
-        entryService.updateEntry(id);
+    public void updateEntry(@PathVariable Long id, @Valid @RequestBody Entry entry) {
+        entryService.updateEntry(id, entry);
     }
-
-
-    @ResponseStatus(HttpStatus.OK)
-    public void deleteEntry(@Valid @PathVariable Entry entry) {
-        entryService.deleteEntry(entry);
-    }*/
-
 
 }
 
