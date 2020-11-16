@@ -8,6 +8,16 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+
+
+/***
+ * This class was not created, but modified by Jason Banyer
+ *
+ * Description of this class:
+ * This class returns and defines the entries, which were received as JSON and then converted to Java Variables.
+ *
+ */
+
 @Entity
 public class Entry {
 
