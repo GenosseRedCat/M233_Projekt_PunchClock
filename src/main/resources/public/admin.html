@@ -45,7 +45,21 @@
     <input type="submit" value="Delete Entry" />
 </form>
 <br>
-
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Check in</th>
+        <th>Check out</th>
+    </tr>
+    </thead>
+    <tbody id="entryDisplay">
+    <tr>
+        <td colspan="3">Loading...</td>
+    </tr>
+    </tbody>
+</table>
+<br>
 <h2>Create a User/Admin</h2>
 <form id="CreateUserForm">
     <label for="username">Username: </label>
@@ -79,19 +93,6 @@
     <input type="submit" value="Delete User/Admin" />
 </form>
 
-<table>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Check in</th>
-        <th>Check out</th>
-    </tr>
-    </thead>
-    <tbody id="entryDisplay">
-    <tr>
-        <td colspan="3">Loading...</td>
-    </tr>
-    </tbody>
-</table>
+
 </body>
 </html>
