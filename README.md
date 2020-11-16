@@ -1,5 +1,12 @@
 <h2>PunchClock Anleitung</h2>
 
+Folgende Schritte befolgen um loszulegen:
+- Sicherstellen, dass JDK 12 installiert und in der Umgebungsvariable `path` definiert ist.
+- Ins Verzeichnis der Applikation wechseln und über die Kommandozeile mit `./gradlew bootRun` oder `./gradlew.bat bootRun` starten
+- Unittest mit `./gradlew test` oder `./gradlew.bat test` ausführen.
+- Ein ausführbares JAR kann mit `./gradlew bootJar` oder `./gradlew.bat bootJar` erstellt werden.
+
+
 <h3>Hinweis</h3>
 Um dieses Programm zum laufen zu bringen, benötigen Sie Intellij.<br>
 Es wird empfohlen minimum die version ``JRE: Java 11.02 SDK `` installiert zu haben.<br><br>
