@@ -43,6 +43,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/css/*", "/js/*") //Whitelisting following pages. * means all
                 .permitAll()
                 .antMatchers("/**").hasRole(ApplicationBenutzerRole.BENUTZER.name()) //will protect anything that has to do with Benutzer
+                .antMatchers("/admin.html").hasRole(ApplicationBenutzerRole.ADMINISTRATOR.name()) //will protect anything that has to do with Administrator
                 .antMatchers(HttpMethod.PUT, "/update/**").hasAuthority(ApplicationBenutzerPermission.BENUTZER_WRITE.name())
                 .antMatchers(HttpMethod.DELETE, "/delete/**").hasAuthority(ApplicationBenutzerPermission.BENUTZER_WRITE.name())
                 .anyRequest()
