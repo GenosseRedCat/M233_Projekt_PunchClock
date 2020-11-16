@@ -21,4 +21,16 @@ public class EntryService {
     public List<Entry> findAll() {
         return entryRepository.findAll();
     }
+
+
+    //Should delete Entry, however doesn't check if it exists. May crash.
+    public void deleteEntry(Long id) {
+        entryRepository.deleteById(id);
+    }
 }
+
+
+
+
+
+
