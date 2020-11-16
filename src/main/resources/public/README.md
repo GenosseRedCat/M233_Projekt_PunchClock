@@ -2,7 +2,7 @@
 
 <h3>Hinweis</h3>
 Um dieses Programm zum laufen zu bringen, benötigen Sie Intellij.<br>
-Es wird empfohlen minimum die version `JRE: Java 11.02 SDK ` installiert zu haben.<br><br>
+Es wird empfohlen minimum die version ``JRE: Java 11.02 SDK `` installiert zu haben.<br><br>
 <br>
 <h2>Installation</h2>
 Importieren Sie dieses Projekt in Intellij und verwenden Sie Gradle.<br>
@@ -10,11 +10,11 @@ Nachdem das Projekt geöffnet wurde, müssen Sie unten rechts auf "import" klick
 Dies sollte bei einer kleinen Mitteilungsbox angezeigt werden.<br>
 
 Als Starter-Klasse verwenden Sie ``ch.zli.m223.punchclock.PunchclockApplication``.<br>
-Danach starten Sie die Klasse ```Punchclock.java```.<br>
+Danach starten Sie die Klasse ``Punchclock.java``.<br>
 
-Öffnen Sie im Browser nun ```localhost:8080```. <br>
+Öffnen Sie im Browser nun ``localhost:8080``. <br>
 Falls hier nichts erscheinen sollte, können Sie folgende ausprobieren: <br>
-```8080, 8081, 8180```<br>
+``8080, 8081, 8180``<br>
 Falls keiner dieser funktioniert, schauen Sie im Intellij Terminal nach folgender Mitteilung:<br>
 ``2020-11-15 19:39:11.981  INFO 18292 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s):``
 <br>
@@ -49,3 +49,4 @@ Um das Adminpanel aufzurufen gehen Sie auf ``localhost:[PORT]/admin.html``
 <br>
 Hier ist eigentlich alles selbsterklärend.
 
+<p>Erstellt von Jason Banyer 15.11.2020</p>
