@@ -4,8 +4,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
 
-/**
- * Also see https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-cors
+/***
+ * This class was not created, but modified by Jason Banyer
+ *
+ * Description of this class:
+ * This Class adds the CorsRegistryMapping.
+ *
  */
 @Configuration
 public class WebConfiguration {
